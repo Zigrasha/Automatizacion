@@ -10,25 +10,15 @@ import pages.casoFacebook.CasuisticaFacebookPage;
 import utilitario.BaseFacebook;
 import utils.MyWebDriverManager;
 
-/**
- * @author Edgardo Fernandez
-*/
 
 @SpringBootTest(classes = TestWebAutomationApplication.class)
 public class ConexionStep {
     @Autowired
     private MyWebDriverManager manager;
 
-    @Autowired
-    private BaseFacebook baseFacebook;
-
-    private static final Logger logger = LoggerFactory.getLogger(CasuisticaFacebookPage.class);
-
-    @Given("Usuario se encuentra en la pagina de facebook")
-    public void abroCanalPrincipal() {
-        logger.info("URL:" + baseFacebook.baseFacebook   );
-         manager.navigateTo( baseFacebook.baseFacebook );
-
+    @Given("Usuario se encuentra en la pagina de Atlantic")
+    public void abroAtlantic() {
+        manager.navigateTo("https://www.casinoatlanticcity.com/" );
     }
 
 }

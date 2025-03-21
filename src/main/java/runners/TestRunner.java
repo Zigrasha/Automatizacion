@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features", // Ruta de los archivos .feature
         glue = {"stepDefinitions"}, // Paquete donde se encuentran los Step Definitions
         plugin = {"pretty", "html:target/cucumber-reports"}, // Plugins de reportes
-        tags = "@casuisticaFacebook"
+        tags = "@Prueba"
 )
 public class TestRunner {
     // Configuración para ejecutar los escenarios de prueba definidos en los archivos .feature

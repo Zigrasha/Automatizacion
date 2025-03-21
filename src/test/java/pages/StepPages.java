@@ -3,6 +3,7 @@ package pages;
 import org.springframework.beans.factory.annotation.Autowired;
 import pages.casoFacebook.CasuisticaFacebookPage;
 import org.springframework.stereotype.Component;
+import pages.casoPrueba.CasoPruebaPage;
 import utils.MyWebDriverManager;
 
 
@@ -15,4 +16,9 @@ public class StepPages {
     public CasuisticaFacebookPage casuisticaFacebookPage() {
         return new CasuisticaFacebookPage(myWebDriverManager.getDriver());
     }
+
+    public CasoPruebaPage casoPruebaPage() {
+        return new CasoPruebaPage(myWebDriverManager.getDriver());
+    }
+
 }
