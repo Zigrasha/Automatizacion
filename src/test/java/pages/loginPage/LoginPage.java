@@ -26,6 +26,9 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[1]/a/div[2]/img")
     protected WebElement imagen;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p")
+    protected WebElement invalid;
+
 
     public void ingresaNombre(String username){
         try {
@@ -63,5 +66,26 @@ public class LoginPage {
 
     }
 
+
+    public void ingresoNoExitoso(){
+
+        String textoValidador = "Invalid credentials";
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if (textoValidador.equals(invalid.getText())) {
+            driver.quit();
+        } else {
+            driver.quit();
+            throw new RuntimeException("No se logró validar el texto de credenciales invalidas");
+        }
+
+
+
+    }
 
 }

@@ -23,6 +23,8 @@ public class LoginStep {
         stepPages.loginPage().ingresoExitoso();
     }
 
-
+    public void ingresoNoExitoso(){
+        stepPages.loginPage().ingresoNoExitoso();
+    }
 
 }

@@ -30,4 +30,8 @@ public class LoginStepDefinition {
         loginStep.ingresoExitoso();
     }
 
+    @Then("usuario no ingresa")
+    public void ingresoNoExitoso() {
+        loginStep.ingresoNoExitoso();
+    }
 }
