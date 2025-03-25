@@ -88,7 +88,7 @@ public class LoginPage {
 
     }
 
-    public void logroIngreso(){
+    public void ingresoExitosoContinuo(){
 
         try {
             Thread.sleep(3000);

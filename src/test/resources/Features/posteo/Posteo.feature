@@ -5,7 +5,7 @@ Feature: Publicacion desde el modulo Buzz
     When ingresa el username "Admin"
     And ingresa la contrasena "admin123"
     And selecciona el boton login
-    Then usuario logra ingresa
+    Then usuario logra ingresar
 
   @PublicacionExitosa
   Scenario: Publicacion exitosa en el modulo Buzz

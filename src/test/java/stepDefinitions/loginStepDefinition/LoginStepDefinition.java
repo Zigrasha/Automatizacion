@@ -31,6 +31,6 @@ public class LoginStepDefinition {
     @Then("usuario no ingresa")
     public void ingresoNoExitoso() { loginStep.ingresoNoExitoso(); }
 
-    @Then("usuario logra ingresa")
-    public void logroIngreso() { loginStep.logroIngreso(); }
+    @Then("usuario logra ingresar")
+    public void ingresoExitosoContinuo() { loginStep.ingresoExitosoContinuo(); }
 }
