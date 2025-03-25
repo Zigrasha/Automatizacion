@@ -88,4 +88,22 @@ public class LoginPage {
 
     }
 
+    public void logroIngreso(){
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if (imagen.isDisplayed()) {
+            System.out.println("se logro ver la imagen");
+        } else {
+            driver.quit();
+            throw new RuntimeException("No se logró validar el ingreso exitoso al localizar la imagen.");
+
+        }
+
+    }
+
 }

@@ -8,7 +8,7 @@ Feature: Login desde formulario de ingreso en OrangeHRM
     When ingresa el username "Admin"
     And ingresa la contrasena "admin123"
     And selecciona el boton login
-    Then usuario ingresa exitosamente
+    Then usuario logra ingresa
 
   @LoginNoExitoso
   Scenario: Login no exitoso en OrangeHRM

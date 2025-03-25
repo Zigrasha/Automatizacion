@@ -19,12 +19,10 @@ public class LoginStep {
         stepPages.loginPage().seleccionarBoton();
     }
 
-    public void ingresoExitoso(){
-        stepPages.loginPage().ingresoExitoso();
-    }
+    public void ingresoExitoso() { stepPages.loginPage().ingresoExitoso(); }
 
-    public void ingresoNoExitoso(){
-        stepPages.loginPage().ingresoNoExitoso();
-    }
+    public void ingresoNoExitoso(){ stepPages.loginPage().ingresoNoExitoso(); }
+
+    public void logroIngreso() { stepPages.loginPage().logroIngreso(); }
 
 }
