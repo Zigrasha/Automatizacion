@@ -2,6 +2,7 @@ package pages;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pages.jobTitlesPage.JobTitlesPage;
 import pages.loginPage.LoginPage;
 import pages.posteoPage.PosteoPage;
 import utils.MyWebDriverManager;
@@ -19,6 +20,10 @@ public class StepPages {
 
     public PosteoPage posteoPage() {
         return new PosteoPage(myWebDriverManager.getDriver());
+    }
+
+    public JobTitlesPage jobTitlesPage() {
+        return new JobTitlesPage(myWebDriverManager.getDriver());
     }
 
 }
