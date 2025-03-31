@@ -20,4 +20,11 @@ public class JobTitlesStep {
     public void clicBoton(){ stepPages.jobTitlesPage().clicBoton(); }
 
     public void tituloExistoso(){ stepPages.jobTitlesPage().tituloExistoso(); }
+
+    public void clicTitulo(){ stepPages.jobTitlesPage().clicTitulo(); }
+
+    public void clicBorrar(){ stepPages.jobTitlesPage().clicBorrar(); }
+
+    public void tituloBorrado(){ stepPages.jobTitlesPage().tituloBorrado(); }
+
 }

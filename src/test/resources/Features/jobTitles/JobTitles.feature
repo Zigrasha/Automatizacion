@@ -1,4 +1,4 @@
-Feature: Crear un nuevo Job Title en el módulo Admin de OrangeHRM
+Feature: Interaccion job Titles en el modulo Admin de OrangeHRM
 
   Background:
     Given Usuario se encuentra en la pagina de OrangeHRM
@@ -17,3 +17,11 @@ Feature: Crear un nuevo Job Title en el módulo Admin de OrangeHRM
     And hacer clic en el boton Save
     Then titulo creado exitosamente
 
+  @TituloBorrado
+  Scenario: Titulo borrado en el modulo Admin
+    When el usuario navega a la sección Admin
+    And selecciona el botón Job
+    And selecciona la opción Job Titles
+    And selecciona titulo
+    And elimina titulo
+    Then titulo borrado exitosamente

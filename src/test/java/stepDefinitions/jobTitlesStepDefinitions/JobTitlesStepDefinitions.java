@@ -32,4 +32,14 @@ public class JobTitlesStepDefinitions {
 
     @Then("titulo creado exitosamente")
     public void tituloExistoso() { jobTitlesStep.tituloExistoso(); }
+
+    @And("selecciona titulo")
+    public void clicTitulo() { jobTitlesStep.clicTitulo(); }
+
+    @And("elimina titulo")
+    public void clicBorrar() { jobTitlesStep.clicBorrar(); }
+
+    @Then("titulo borrado exitosamente")
+    public void tituloBorrado() { jobTitlesStep.tituloBorrado(); }
+
 }

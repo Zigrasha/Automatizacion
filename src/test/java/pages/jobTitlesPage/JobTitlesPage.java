@@ -43,6 +43,20 @@ public class JobTitlesPage {
     @FindBy(xpath = "//*[@id=\"oxd-toaster_1\"]/div/div/div[2]/p")
     protected WebElement mensaje;
 
+    @FindBy(xpath = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[3]")
+    protected List<WebElement> lista;
+
+    @FindBy(xpath = "")
+    protected WebElement basu;
+
+    @FindBy(xpath = "")
+    protected WebElement yes;
+
+    @FindBy(xpath = "")
+    protected WebElement vali;
+
+
+
     public void navegaAdmin() {
         Admin.click();
         try {
@@ -143,4 +157,12 @@ public class JobTitlesPage {
             throw new RuntimeException("No se logró validar el texto de success");
         }
     }
+
+    public void clicTitulo(){
+
+    }
+
+    public void clicBorrar(){}
+
+    public void tituloBorrado(){}
 }

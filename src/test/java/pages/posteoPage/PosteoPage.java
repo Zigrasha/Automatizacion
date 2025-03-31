@@ -16,7 +16,7 @@ public class PosteoPage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[12]/a")
     protected WebElement Buzz;
 
-    @FindBy(xpath = "//textarea[@placeholder=\"What's on your mind?\"]")
+    @FindBy(xpath = "//*[@id=\"app\"]/div/div[2]/div/div/div/div/div/div/div[2]/form/div/textarea")
     protected WebElement come;
 
     @FindBy(xpath = "//button[contains(@class, 'oxd-button--main')]")
@@ -34,9 +34,15 @@ public class PosteoPage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 
     public void ingresaComentario(String comentario) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         come.sendKeys(comentario);
     }
 
