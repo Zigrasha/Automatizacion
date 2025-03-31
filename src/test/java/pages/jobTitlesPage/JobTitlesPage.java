@@ -47,7 +47,7 @@ public class JobTitlesPage {
     protected List<WebElement> lista;
 
     @FindBy(xpath = "")
-    protected WebElement basu;
+    protected WebElement bas;
 
     @FindBy(xpath = "")
     protected WebElement yes;
