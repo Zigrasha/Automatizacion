@@ -1,3 +1,4 @@
+@JobTitles @Regresion
 Feature: Interaccion job Titles en el modulo Admin de OrangeHRM
 
   Background:

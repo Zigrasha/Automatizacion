@@ -1,3 +1,4 @@
+@Posteo @Regresion
 Feature: Publicacion desde el modulo Buzz
 
   Background:

@@ -1,3 +1,4 @@
+@Login @Regresion
 Feature: Login desde formulario de ingreso en OrangeHRM
 
   Background:
