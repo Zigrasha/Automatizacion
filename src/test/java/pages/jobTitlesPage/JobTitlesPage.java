@@ -46,13 +46,13 @@ public class JobTitlesPage {
     @FindBy(xpath = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[3]")
     protected List<WebElement> lista;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[3]/div/div[2]/div/div/div[4]/div/button")
     protected WebElement bas;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[3]/div/div/div/div[3]/button[2]")
     protected WebElement yes;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"oxd-toaster_1\"]/div/div/div[2]/p")
     protected WebElement vali;
 
 
@@ -160,9 +160,67 @@ public class JobTitlesPage {
 
     public void clicTitulo(){
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        for (WebElement opcion : lista) {
+
+            System.out.println(opcion.getText());
+            if (!lista.isEmpty()){
+                WebElement primer = lista.get(0);
+                primer.click();
+            }
+        }
+
     }
 
-    public void clicBorrar(){}
+    public void clicBorrar(){
 
-    public void tituloBorrado(){}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        bas.click();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        yes.click();
+    }
+
+    public void tituloBorrado(){
+
+        String verificacion = "Success";
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if (verificacion.equals(vali.getText())) {
+            System.out.println("Se logra ver el mensaje: " + vali.getText());
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            driver.quit();
+
+        } else {
+            driver.quit();
+
+            throw new RuntimeException("No se logró validar el texto de success");
+        }
+
+    }
 }
