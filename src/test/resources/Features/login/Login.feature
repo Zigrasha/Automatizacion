@@ -5,15 +5,23 @@ Feature: Login desde formulario de ingreso en OrangeHRM
     Given Usuario se encuentra en la pagina de OrangeHRM
 
   @LoginExitoso
-  Scenario: Login exitoso en OrangeHRM
-    When ingresa el username "Admin"
-    And ingresa la contrasena "admin123"
+  Scenario Outline: Login exitoso en OrangeHRM
+    When ingresa el username "<user>"
+    And ingresa la contrasena "<pass>"
     And selecciona el boton login
     Then usuario ingresa exitosamente
 
+    Examples:
+    |user|pass|
+    |Admin|admin123|
+
   @LoginNoExitoso
-  Scenario: Login no exitoso en OrangeHRM
-    When ingresa el username "GAEL"
-    And ingresa la contrasena "75667666"
+  Scenario Outline: Login no exitoso en OrangeHRM
+    When ingresa el username "<user>"
+    And ingresa la contrasena "<pass>"
     And selecciona el boton login
     Then usuario no ingresa
+
+    Examples:
+    |user|pass|
+    |Gael|1234|
