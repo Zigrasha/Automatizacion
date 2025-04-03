@@ -9,8 +9,13 @@ Feature: Publicacion desde el modulo Buzz
     Then usuario logra ingresar
 
   @PublicacionExitosa
-  Scenario: Publicacion exitosa en el modulo Buzz
+  Scenario Outline: Publicacion exitosa en el modulo Buzz
     When el usuario navega a la seccion Buzz
-    And ingresa comentario "estoy pensando"
+    And ingresa comentario "<texto>"
     And hace clic en el boton Post
     Then la publicacion es exitosa
+
+    Examples:
+    |texto|
+    |hola, que me cuentan?|
+    |Estoy pensando       |

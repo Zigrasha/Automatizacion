@@ -9,14 +9,19 @@ Feature: Interaccion job Titles en el modulo Admin de OrangeHRM
     Then usuario logra ingresar
 
   @TituloExitoso
-  Scenario: Titulo exitoso en el modulo Admin
+  Scenario Outline: Titulo exitoso en el modulo Admin
     When el usuario navega a la sección Admin
     And selecciona el botón Job
     And selecciona la opción Job Titles
     And presiona el botón + Add
-    And ingresar el titulo "Ingeniero en Sistemas"
+    And ingresar el titulo "<titulos>"
     And hacer clic en el boton Save
     Then titulo creado exitosamente
+
+    Examples:
+    |titulos|
+    |Mecanico|
+    |Ingeniero en Sistemas|
 
   @TituloBorrado
   Scenario: Titulo borrado en el modulo Admin

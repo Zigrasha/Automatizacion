@@ -151,9 +151,8 @@ public class JobTitlesPage {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            driver.quit();
+
         } else {
-            driver.quit();
             throw new RuntimeException("No se logró validar el texto de success");
         }
     }

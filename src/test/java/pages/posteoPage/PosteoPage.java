@@ -67,9 +67,9 @@ public class PosteoPage {
 
         if (confirmacion.equals(toaster.getText())) {
             System.out.println("se logra ver el texto: " + confirmacion);
-            driver.quit();
+
         } else {
-            driver.quit();
+
             throw new RuntimeException("No se logró validar el texto de success");
         }
 
