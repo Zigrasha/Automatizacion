@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pages.jobTitlesPage.JobTitlesPage;
 import pages.loginPage.LoginPage;
+import pages.mercadoLibrePage.MercadoLibrePage;
 import pages.posteoPage.PosteoPage;
 import utils.MyWebDriverManager;
 
@@ -25,5 +26,7 @@ public class StepPages {
     public JobTitlesPage jobTitlesPage() {
         return new JobTitlesPage(myWebDriverManager.getDriver());
     }
+
+    public MercadoLibrePage mercadoLibrePage(){ return new MercadoLibrePage(myWebDriverManager.getDriver());}
 
 }

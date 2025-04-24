@@ -17,4 +17,9 @@ public class ConexionStep {
         manager.navigateTo("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" );
     }
 
+    @Given("Usuario se encuentra en la pagina de Mercado Libre")
+    public void abroMercadoLibre() {
+        manager.navigateTo("https://www.mercadolibre.com" );
+    }
+
 }
